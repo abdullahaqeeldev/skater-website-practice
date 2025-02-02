@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        nav{
+            position: fixed;
+            left: 0;
+            right: 0;
+            z-index: 1;
+        }
+        .nav {
+            height: 100px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            font-family: "Poppins", serif;
+            background-color: #222;
+          
+
+        }
+
+        .logo {
+            align-content: center;
+            padding-left: 50px;
+        }
+
+        .logo a {
+            text-decoration: none;
+            color: #ff8b00;
+
+
+        }
+
+        .icons {
+            align-content: center;
+
+
+        }
+
+        .icons ul {
+            display: flex;
+
+            list-style-type: none;
+
+
+
+
+        }
+
+        .icons ul li {
+            margin-right: 30px;
+
+        }
+
+
+        .icons ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            color: #ff8b00;
+
+
+
+        }
+
+        .icons ul li:hover {
+            border-bottom: 1px solid #ff8b00;
+
+        }
+      
+        
+
+
+
+        .dropdown ul {
+            border-top: 3px solid #ff8b00;
+            display: block;
+            position: absolute;
+            top: 60px;
+            display: none;
+            background-color: rgb(255, 255, 255);
+            width: 150px;
+            height: 120px;
+
+
+
+        }
+
+        .dropdown ul li {
+            padding-top: 5px;
+            width: 150px;
+        }
+
+        .dropdown ul li a {
+            color: rgb(0, 0, 0);
+            padding-left: 5px;
+
+
+        }
+
+        li:hover .dropdown ul {
+            display: block;
+        }
+
+        .dropdown ul li:hover {
+            background-color: whitesmoke;
+
+        }
+
+        .dropdown2 ul {
+            border-top: 3px solid #ff8b00;
+            display: block;
+            position: absolute;
+            top: 90px;
+            left: 150px;
+            background-color: rgb(255, 255, 255);
+            width: 150px;
+            height: 120px;
+            display: none;
+
+
+
+        }
+
+        .dropdown2 ul li {
+            padding-top: 5px;
+            width: 150px;
+        }
+
+        .dropdown2 ul li a {
+            padding-left: 5px;
+            color: rgb(0, 0, 0);
+
+
+        }
+
+        .first:hover .dropdown2 {
+            display: none;
+        }
+
+
+        .second:hover .dropdown2 {
+            display: block;
+        }
+
+        .sec1 {
+            height: 800px;
+            width: 100%;
+
+        }
+
+        .sec1 {
+
+            background-image: url(hero_2.jpg.webp);
+            height: 100vh;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-attachment: fixed;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+          
+
+            
+
+
+
+        }
+
+        .about {
+            position: absolute;
+            
+            top: 300px;
+            text-align: center;
+            width: 500px;
+           
+           
+
+
+        }
+
+        .about h1 {
+            font-size: 50px;
+            font-family: "Poppins", serif;
+            color: white;
+        }
+
+        .about p {
+            font-family: "Poppins", serif;
+            color: white;
+            font-size: 20px;
+            padding-bottom: 20px;
+
+        }
+
+        .about a {
+            font-family: "Poppins", serif;
+            color: white;
+            font-weight: 500;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 2px solid white;
+            border-radius: 5px;
+
+
+        }
+
+        .about a:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .sec2 {
+            background-color: #222;
+            height: 800px;
+            width: 100%;
+        }
+
+        .sec2 .heading {
+            text-align: center;
+            padding-top: 50px;
+            font-family: "Poppins", serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+
+        }
+
+
+
+        .serv {
+
+            font-size: 45px;
+            color: #ff8c00;
+        }
+
+        .sec2 .intro {
+            color: #8a8a8a;
+            width: 600px;
+        }
+
+        .card1 {
+            width: 400px;
+            height: 300px;
+
+            font-family: "Poppins", serif;
+
+
+        }
+
+        .card1 img {
+            height: 70px;
+            width: 70px;
+            background-color: #ff8b00;
+            border-radius: 100px;
+            padding: 5px;
+            margin-top: 20px;
+
+        }
+
+        .card1 h1 {
+            font-size: 20px;
+            color: white;
+            padding-top: 20px;
+        }
+
+        .card1 p {
+            font-size: 15px;
+            color: white;
+            padding-top: 10px;
+
+        }
+
+        .card2 {
+            width: 400px;
+            height: 300px;
+            font-family: "Poppins", serif;
+
+
+        }
+
+        .card2 img {
+            height: 70px;
+            width: 70px;
+            background-color: #ff8b00;
+            border-radius: 100px;
+            padding: 5px;
+            margin-top: 20px;
+
+        }
+
+        .card2 h1 {
+            font-size: 20px;
+            color: white;
+            padding-top: 20px;
+        }
+
+        .card2 p {
+            font-size: 15px;
+            color: white;
+            padding-top: 10px;
+
+        }
+
+        .card3 {
+            width: 400px;
+            height: 300px;
+
+            font-family: "Poppins", serif;
+
+
+        }
+
+        .card3 img {
+            height: 70px;
+            width: 70px;
+            background-color: #ff8b00;
+            border-radius: 100px;
+            padding: 5px;
+            margin-top: 20px;
+
+        }
+
+        .card3 h1 {
+            font-size: 20px;
+            color: white;
+            padding-top: 20px;
+        }
+
+        .card3 p {
+            font-size: 15px;
+            color: white;
+            padding-top: 10px;
+
+        }
+
+        .card4 {
+            width: 400px;
+            height: 300px;
+
+            font-family: "Poppins", serif;
+
+
+        }
+
+        .card4 img {
+            height: 70px;
+            width: 70px;
+            background-color: #ff8b00;
+            border-radius: 100px;
+            padding: 5px;
+            margin-top: 20px;
+
+        }
+
+        .card4 h1 {
+            font-size: 20px;
+            color: white;
+            padding-top: 20px;
+        }
+
+        .card4 p {
+            font-size: 15px;
+            color: rgb(255, 255, 255);
+            padding-top: 10px;
+
+        }
+
+        .card5 {
+            width: 400px;
+            height: 300px;
+            font-family: "Poppins", serif;
+
+
+        }
+
+        .card5 img {
+            height: 70px;
+            width: 70px;
+            background-color: #ff8b00;
+            border-radius: 100px;
+            padding: 5px;
+            margin-top: 20px;
+
+        }
+
+        .card5 h1 {
+            font-size: 20px;
+            color: white;
+            padding-top: 20px;
+        }
+
+        .card5 p {
+            font-size: 15px;
+            color: rgb(255, 255, 255);
+            padding-top: 10px;
+
+        }
+
+        .card6 {
+            font-size: 15px;
+            width: 400px;
+            height: 300px;
+
+
+            font-family: "Poppins", serif;
+
+
+        }
+
+        .card6 img {
+            height: 70px;
+            width: 70px;
+            background-color: #ff8b00;
+            border-radius: 100px;
+            padding: 5px;
+            margin-top: 20px;
+
+        }
+
+        .card6 h1 {
+            font-size: 20px;
+            color: white;
+            padding-top: 20px;
+        }
+
+        .card6 p {
+            font-size: 15px;
+            color: white;
+            padding-top: 10px;
+
+        }
+
+
+        .cards {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+
+
+        }
+
+        .sec3 {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            background-color: #222;
+            height: 1500px;
+            width: 100%;
+
+        }
+
+        .img1 {
+
+            height: 600px;
+            width: 500px;
+
+        }
+
+        .sec3-about {
+            padding-top: 150px;
+            display: flex;
+        }
+
+        .sec3-intro {
+            width: 450px;
+
+            padding-left: 50px;
+            font-family: "Poppins", serif;
+        }
+
+        .sec3-intro h1 {
+            color: #ff8b00;
+            font-size: 30px;
+
+        }
+
+        .sec3-intro p {
+            color: rgb(160, 160, 160);
+            padding-top: 20px;
+        }
+
+        .sec3-intro ul {
+            padding-top: 30px;
+            color: rgb(160, 160, 160);
+        }
+
+        .sec3-intro ul li {
+            padding-top: 20px;
+        }
+
+        .img2 {
+            padding-left: 50px;
+            height: 600px;
+            width: 500px;
+
+        }
+
+        .sec3-about2 {
+
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        .sec3-intro2 {
+            width: 450px;
+            padding-top: 50px;
+            font-family: "Poppins", serif;
+        }
+
+        .sec3-intro2 h1 {
+            color: #ff8b00;
+            font-size: 30px;
+
+        }
+
+        .sec3-intro2 p {
+            color: rgb(160, 160, 160);
+            padding-top: 20px;
+        }
+
+        .sec3-intro2 ul {
+            padding-top: 30px;
+            color: rgb(160, 160, 160);
+        }
+
+        .sec3-intro2 ul li {
+            padding-top: 20px;
+        }
+
+        .sec4 {
+            height: 250px;
+            width: 100%;
+            display: flex;
+            background-color: #222;
+            justify-content: space-around;
+            text-align: center;
+            font-family: "Poppins", serif;
+        }
+
+        .sec4 h1 {
+            font-size: 50px;
+            color: #ff8b00;
+            border-bottom: 2px solid gray;
+        }
+
+        .sec4 p {
+            font-size: 15px;
+            padding-top: 10px;
+            color: rgb(255, 255, 255);
+
+
+        }
+
+        .sec5 {
+            padding-top: 50px;
+            height: 600px;
+            width: 100%;
+            background-color: #222;
+        }
+
+        .sec5-card1 {
+            border-radius: 10px;
+            background-color: #333;
+            height: 300px;
+            width: 300px;
+            text-align: center;
+            font-family: "Poppins", serif;
+
+        }
+
+        .sec5-card1 .trainer-img {
+            height: 130px;
+            width: 130px;
+            border-radius: 100px;
+            border: 2px solid #ffffff;
+        }
+
+        .sec5-card1 ul {
+
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+
+        }
+
+        .sec5-card1 ul li a img {
+            margin-top: 10px;
+            height: 30px;
+            width: 30px;
+            background-color: #ff8b00;
+            margin-right: 7px;
+            border-radius: 5px;
+
+
+        }
+
+        .sec5-card1 ul li a img:hover {
+            background-color: transparent;
+            border: 1px solid #ff8b00;
+        }
+
+        .sec5-card1 h1 {
+            padding-top: 20px;
+            font-size: 20px;
+            color: #ff8b00;
+        }
+
+        .sec5-card1 p {
+            font-size: 15px;
+            color: rgb(160, 160, 160);
+        }
+
+        .sec5 {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .sec5-heading {
+            background-color: #222;
+            text-align: center;
+            font-family: "Poppins", serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .sec5-heading h1 {
+            color: #ff8b00;
+            font-size: 40px;
+
+        }
+
+        .sec5-heading p {
+            width: 600px;
+            color: rgb(160, 160, 160);
+
+
+        }
+
+        .footer {
+            background-color: #333;
+            display: flex;
+            justify-content: space-around;
+            height: 400px;
+            width: 100%;
+        
+            
+        }
+        .foot-about{
+            padding-top: 100px;
+            padding-left: 40px;
+        }
+        .foot-about h3{
+            color: white;
+            font-family: "Poppins", serif;
+            font-size: 15px;
+
+        }
+        .foot-about p{
+            padding-top: 15px;
+            color: white;
+            font-family: "Poppins", serif;
+            font-size: 15px;
+            width: 350px;
+
+        }
+        .features{
+            padding-top: 80px;
+            padding-left: 50px;
+            font-family: "Poppins", serif;
+        }
+        .features ul h2{
+            font-size: 20px;
+            font-weight: 400;
+            color: rgb(255, 255, 255);
+
+        }
+        .features ul{
+            list-style-type: none;
+        }
+        .features ul li {
+            padding-top: 10px;
+        }
+        .features ul li a{
+            text-decoration: none;
+            color: rgb(160, 160, 160);
+        }
+        .features ul li a:hover{
+            color: white
+        }
+        .foot-input {
+            margin-top: 100px;
+            vertical-align: top;
+        }
+        .foot-input h3{
+            font-family: "Poppins", serif;
+            font-size: 17px;
+            color: white;
+            font-weight: 500;
+
+
+           
+        }
+        .foot-input h2{
+            font-family: "Poppins", serif;
+            font-size: 17px;
+            color: white;
+            font-weight: 500;
+            margin-top: 30px;
+
+
+           
+        }
+
+        .foot-input input{
+            margin-top: 20px;
+            width: 200px;
+            height: 40px;
+
+        }
+        .links ul {
+            display: flex;
+        }
+        .foot-input .links ul li a img{
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    margin-top: 50px;
+    background-color: white;
+    border-radius: 10px;
+        }
+     
+
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav">
+            <div class="logo">
+                <h1><a href="#">SKATER</a></h1>
+            </div>
+            <div class="icons">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li class="first"><a href="#">about</a>
+                        <div class="dropdown">
+                            <ul>
+
+                                <li><a href="#">Team</a></li>
+                                <li><a href="#">Pricing</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li class="second"><a href="#">Morelinks ></a>
+
+                                    <div class="dropdown2">
+                                        <ul>
+                                            <li><a href="#">Menu one</a></li>
+                                            <li><a href="#">Menu two</a></li>
+                                            <li><a href="#">Menu three</a></li>
+                                        </ul>
+
+                                    </div>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+    <div class="sec1">
+        <div class="about">
+            <h1>Hi IM JHON AND I SKATE A LOT</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <a href="#">GET IN TOUCH</a>
+        </div>
+
+
+    </div>
+    <div class="sec2">
+        <div class="heading">
+            <h1 class="serv">SERVICES</h1>
+            <p class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere at delectus laudantium,
+                deserunt, atque
+                eveniet. Voluptatem, fuga quos rerum inventore.</p>
+        </div>
+
+        <div class="cards">
+            <div class="card1">
+                <img src="icons8-logo-100.png" alt="">
+                <h1>Skate for Beginner</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur dolores voluptas obcaecati quo
+                    consequuntur mollitia facilis</p>
+
+            </div>
+            <div class="card2">
+                <img src="icons8-logo-100 (3).png" alt="">
+                <h1>Skate for Beginner</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur dolores voluptas obcaecati quo
+                    consequuntur mollitia facilis</p>
+
+            </div>
+            <div class="card3">
+                <img src="icons8-logo-100 (2).png" alt="">
+                <h1>Skate for Beginner</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur dolores voluptas obcaecati quo
+                    consequuntur mollitia facilis</p>
+
+            </div>
+
+            <div class="card4">
+                <img src="icons8-logo-100 (1).png" alt="">
+                <h1>Skate for Beginner</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur dolores voluptas obcaecati quo
+                    consequuntur mollitia facilis</p>
+
+            </div>
+            <div class="card5">
+                <img src="icons8-search-64.png" alt="">
+                <h1>Skate for Beginner</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur dolores voluptas obcaecati quo
+                    consequuntur mollitia facilis</p>
+
+            </div>
+            <div class="card6">
+                <img src="icons8-youtube-50.png" alt="">
+                <h1>Skate for Beginner</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur dolores voluptas obcaecati quo
+                    consequuntur mollitia facilis</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="sec3">
+        <div class="sec3-about">
+            <img class="img1" src="img_1.jpg.webp" alt="">
+            <div class="sec3-intro">
+                <h1>My Best Performance</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus id dignissimos nemo minus
+                    perspiciatis ullam itaque voluptas iure vero, nesciunt unde odit aspernatur distinctio, maiores
+                    facere officiis. Cum, esse, iusto?</p>
+                <p>Minus perspiciatis ullam itaque voluptas iure vero, nesciunt unde odit aspernatur distinctio, maiores
+                    facere officiis. Cum, esse, iusto?
+                </p>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet consectetur, .</li>
+                    <li>Lorem ipsum dolor sit amet elit. Dicta, aliquam.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur, .</li>
+                    <li>Lorem ipsum dolor sit amet </li>
+                </ul>
+            </div>
+        </div>
+        <div class="sec3-about2">
+            <img class="img2" src="img_2.jpg.webp" alt="">
+            <div class="sec3-intro2">
+                <h1>My Best Performance</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus id dignissimos nemo minus
+                    perspiciatis ullam itaque voluptas iure vero, nesciunt unde odit aspernatur distinctio, maiores
+                    facere officiis. Cum, esse, iusto?</p>
+                <p>Minus perspiciatis ullam itaque voluptas iure vero, nesciunt unde odit aspernatur distinctio,
+                    maiores
+                    facere officiis. Cum, esse, iusto?
+                </p>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet consectetur, .</li>
+                    <li>Lorem ipsum dolor sit amet elit. Dicta, aliquam.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur, .</li>
+                    <li>Lorem ipsum dolor sit amet </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <div class="sec4">
+        <div class="sec4-first">
+            <h1>30+</h1>
+            <p>Year of Experience</p>
+
+        </div>
+        <div class="sec4-second ">
+            <h1>4+</h1>
+            <p>Expert Trainer</p>
+
+        </div>
+        <div class="sec4-third ">
+            <h1>4+</h1>
+            <p>Number of Trainer</p>
+
+        </div>
+        <div class="sec4-forth ">
+            <h1>1,500+</h1>
+            <p>Number of Members</p>
+
+        </div>
+
+
+    </div>
+    <div class="sec5-heading">
+        <h1>Our Team
+        </h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere at delectus laudantium, deserunt, atque
+            eveniet.</p>
+
+    </div>
+    <div class="sec5">
+
+        <div class="sec5-cards">
+            <div class="sec5-card1">
+                <img class="trainer-img" src="person_1.jpg.webp" alt="">
+                <h1>JEAN SMITH</h1>
+                <p>Skate board trainer</p>
+                <ul>
+                    <li><a href="#"><img src="icons8-insta-50.png" alt=""></a></li>
+                    <li><a href="#"><img src="icons8-youtube-50.png"></a></li>
+                    <li><a href="#"><img src="icons8-facebook-logo-50.png" alt=""></a></li>
+                </ul>
+
+            </div>
+
+        </div>
+        <div class="sec5-cards">
+            <div class="sec5-card1">
+                <img class="trainer-img" src="person_2.jpg.webp" alt="">
+                <h1>Bob Carry</h1>
+                <p>Skate board trainer</p>
+                <ul>
+                    <li><a href="#"><img src="icons8-insta-50.png" alt=""></a></li>
+                    <li><a href="#"><img src="icons8-youtube-50.png"></a></li>
+                    <li><a href="#"><img src="icons8-facebook-logo-50.png" alt=""></a></li>
+                </ul>
+
+            </div>
+
+        </div>
+        <div class="sec5-cards">
+            <div class="sec5-card1">
+                <img class="trainer-img" src="person_1.jpg.webp" alt="">
+                <h1>Ricky Fisher</h1>
+                <p>Skate board trainer</p>
+                <ul>
+                    <li><a href="#"><img src="icons8-insta-50.png" alt=""></a></li>
+                    <li><a href="#"><img src="icons8-youtube-50.png"></a></li>
+                    <li><a href="#"><img src="icons8-facebook-logo-50.png" alt=""></a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="foot-about">
+                <h3>About Us</h3>
+                <p class="about3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facere laudantium magnam voluptatum
+                    autem. Amet aliquid nesciunt veritatis aliquam.</p>
+            </div>
+            <div class="features">
+                <ul>
+                    <li>
+                        <h2> Features</h2>
+                    </li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">Press Releases</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Contact Us</a></li>
+
+                </ul>
+            </div>
+            <div class="foot-input">
+                <h3>Subscribe to Newsletter</h3>
+                <label for="search"><input type="search" placeholder="Enter Email"></label>
+                <h2>Follow</h2>
+                <div class="links">
+                    <ul>
+                        <li><a href="#"><img src="icons8-youtube-50.png" alt=""></a></li>
+                        <li><a href="#"><img src="icons8-insta-50.png" alt=""></a></li>
+                        <li><a href="#"><img src="icons8-facebook-logo-50.png" alt=""></a></li>
+                        <li><a href="#"><img src="icons8-twitter-bird-50.png" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
